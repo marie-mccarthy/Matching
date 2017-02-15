@@ -24,21 +24,41 @@ public class Game
 					file = new Scanner( new File( "Animals" ) );
 
 				}
+				String card1 = "";
+		    	String card2 = "";
+		    	int i = 0;
 			int numberOfLines = file.nextInt();
 			file.nextLine();
-			  for( int zz = 0; zz < numberOfLines; zz++ )
-				    {
-				    	String word = file.nextLine();
-				    	String card1 = word;
-				    	String card2 = word;
-				    	board.add(new cards(card1));
-				    	System.out.println(card1);
-				    	board.add(new cards(card2));
-				    	System.out.println(card2);
-				    	
-				    }
+//			  for( int z = 0; z < numberOfLines; z++ )
+//				    {
+//				    	String word = file.nextLine();
+//				    	card1 = word;
+//				    	card2 = word;
+//				    	board.add(new cards(word, z));
+//				    	int x = z+1;
+//				    	board.add(new cards(word, x));
+//				
+//				    	
+//						System.out.println(board.get(z).getName());
+//							
+//				    }
 			  
-//			  Collections.shuffle(board);
+			board.add(new cards("fish", 1));
+			board.add(new cards("bird", 2));
+			board.add(new cards("cat", 3));
+			board.add(new cards("snake", 4));
+			
+			board.add(new cards("fish", 1));
+			board.add(new cards("bird", 2));
+			board.add(new cards("cat ", 3));
+			board.add(new cards("horse", 4));
+		//	  Collections.shuffle(board);
+			  //there is somthing wrong with this 
+			  System.out.println();
+			  for( i = 0; i<board.size();i++)
+				  {
+					  System.out.println(board.get(i).getName());
+				  }
 //			  String [][] MyMatrix = {{board.get(1).getName(),board.get(2).getName()},
 //						  			{board.get(3).getName(), board.get(4).getName()},
 //				  					{board.get(5).getName(), board.get(6).getName()},
